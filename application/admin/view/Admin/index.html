@@ -71,15 +71,28 @@
 				</ul>
 			</dd>
 		</dl>
+		{volist name="cate" id="row"}
 		<dl id="menu-product">
-			<dt><i class="Hui-iconfont">&#xe620;</i> 题库管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dt><i class="Hui-iconfont">&#xe620;</i> {$row['name']} <i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			{if condition="$row['shop']"}
 			<dd>
 				<ul>
-					<li><a data-href="/quest/index" data-title="题目管理" href="javascript:void(0)">题目管理</a></li>
-					<li><a data-href="/cate/index" data-title="题型管理" href="javascript:void(0)">题型管理</a></li>
-			</ul>
-		</dd>
-	</dl>
+					{volist name="row['shop']" id="rows"}
+					{if condition = "$rows['lei'] == 0"}
+					<li><a href="/intro/index0?id=2" data-title="题目管理" href="javascript:void(0)">{$rows['name']} </a></li>
+					{elseif condition = "$rows['lei'] == 1"}
+					<li><a data-href="/intro/index1" data-title="题目管理" href="javascript:void(0)">{$rows['name']} </a></li>
+					{elseif condition = "$rows['lei'] == 2"}
+					<li><a data-href="/intro/index2" data-title="题目管理" href="javascript:void(0)">{$rows['name']} </a></li>
+					{elseif condition = "$rows['lei'] == 3"}
+					<li><a data-href="/intro/index3" data-title="题目管理" href="javascript:void(0)">{$rows['name']} </a></li>
+					{/if}
+					{/volist}
+				</ul>
+			</dd>
+			{/if}
+		</dl>
+		{/volist}
 		<!--<dl id="menu-comments">-->
 			<!--<dt><i class="Hui-iconfont">&#xe622;</i> 评论管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>-->
 			<!--<dd>-->
@@ -166,7 +179,7 @@
 </ul>
 </div>
 <!--_footer 作为公共模版分离出去-->
-<script type="text/javascript" src="/static/admin/lib/jquery/1.9.1/jquery.min.js"></script> 
+<script type="text/javascript" src="/static/admin/lib/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript" src="/static/admin/lib/layer/2.4/layer.js"></script>
 <script type="text/javascript" src="/static/admin/static/h-ui/js/H-ui.min.js"></script>
 <script type="text/javascript" src="/static/admin/static/h-ui.admin/js/H-ui.admin.js"></script> <!--/_footer 作为公共模版分离出去-->
@@ -179,7 +192,7 @@
       console.log(data)
       if(data == 1){
          layer.msg('清空缓存成功',{icon:1,time:2000});
-      }	
+      }
     })
   })
 /*个人信息*/
@@ -228,7 +241,7 @@ function member_add(title,url,w,h){
 }
 
 
-</script> 
+</script>
 
 <!--此乃百度统计代码，请自行删除-->
 <script>
@@ -236,7 +249,7 @@ var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
   hm.src = "https://hm.baidu.com/hm.js?080836300300be57b7f34f4b3e97d911";
-  var s = document.getElementsByTagName("script")[0]; 
+  var s = document.getElementsByTagName("script")[0];
   s.parentNode.insertBefore(hm, s);
 })();
 </script>

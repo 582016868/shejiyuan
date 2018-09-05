@@ -15,20 +15,21 @@ use think\Db;
  * Class Index
  * @package app\admin\controller
  */
-class Aorder extends Allow
+class Intro extends Allow
 {
     //订单列表
-    public function getIndex()
+    public function getIndex1()
     {
         //创建请求对象
-        $request=request();
-        $s=$request->get("keyword");
-        //获取所有数据
-        $map['u.name|o.order_num'] = ['like',"%".$s."%"];
-        $list = Db::field('o.id,o.order_num,o.price,o.openid,o.addtime,u.name')
-            ->table('order1 o,user u')->where('o.openid = u.openid')->where($map)->where('o.price > 0')->order('o.addtime','desc')
-            ->paginate(15);
-        return $this->fetch("Aorder/index",["list"=>$list,'s'=>$s,'request'=>$request->param()]);
+//        $request=request();
+////        $s=$request->get("keyword");
+////        //获取所有数据
+////        $map['u.name|o.order_num'] = ['like',"%".$s."%"];
+////        $list = Db::field('o.id,o.order_num,o.price,o.openid,o.addtime,u.name')
+////            ->table('order1 o,user u')->where('o.openid = u.openid')->where($map)->where('o.price > 0')->order('o.addtime','desc')
+////            ->paginate(15);
+        var_dump($_GET);
+        return $this->fetch("Intro/index1");
     }
     //执行删除
     public function postdel(){
@@ -42,7 +43,7 @@ class Aorder extends Allow
     //修改
     public function getedit(){
         $info = db('order1')->where('id',$_GET['id'])->find();
-        return $this->fetch('Aorder/edit',['info'=>$info]);
+        return $this->fetch('Intro/edit',['info'=>$info]);
     }
     //执行修改
     public function postDoedit(){

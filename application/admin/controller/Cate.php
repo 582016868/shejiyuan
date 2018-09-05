@@ -70,6 +70,8 @@ class Cate extends Allow
             $data['path'] = $info['path'].','.$info['id'];
         }
         $data['name'] = $_POST['name'];
+        $data['ename'] = $_POST['ename'];
+        $data['lei'] = $_POST['lei'];
         $data['pid'] = $pid;
         // 以id的存在判断是修改还是添加
         if(isset($_POST['id'])){
@@ -103,4 +105,6 @@ class Cate extends Allow
             }
         }
     }
+    //版式一查看内容
+
 }

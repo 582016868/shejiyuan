@@ -14,7 +14,7 @@ Route::controller('user','admin/User');         // 会员
 Route::controller('cate','admin/Cate');         // 导航分类
 Route::controller('quest','admin/Quest');       // 题库
 Route::controller('wx','admin/Wx');             // 配置参数
-Route::controller('aorder','admin/Aorder');    // 订单
+Route::controller('intro','admin/Intro');    // 订单
 
 // 接口模块路由
 Route::controller('auth','index/Login');        // 小程序授权登录

@@ -18,13 +18,26 @@ use think\Db;
  */
 class Index extends Allow
 {
+    //获取无限分类递归数据
+    public function cates($pid){
+        $data=Db::table("cates")->where('pid',$pid)->select();
+        //遍历
+        $data1=array();
+        foreach($data as $key=>$value){
+            $value['shop']=$this->cates($value['id']);
+            $data1[]=$value;
+        }
+        return $data1;
+    }
     /**
      * 首页
      * @return mixed
      */
     public function getIndex()
     {
-        return $this->fetch('Admin/index',['uname'=>session('uname')]);
+        //获取无限分类递归数据
+        $cate=$this->cates(0);
+        return $this->fetch('Admin/index',['cate'=>$cate,'uname'=>session('uname')]);
     }
     /**
      * 首页
@@ -32,7 +45,10 @@ class Index extends Allow
      */
     public function index()
     {
-        return $this->fetch('Admin/index',['uname'=>session('uname')]);
+        //获取无限分类递归数据
+        $cate=$this->cates(0);
+        var_dump($_GET);die;
+        return $this->fetch('Admin/index',['cate'=>$cate,'uname'=>session('uname')]);
     }
     /**
      * 首页欢迎页
