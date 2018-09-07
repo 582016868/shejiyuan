@@ -1,0 +1,136 @@
+@charset "utf-8";
+/*全局定义*/
+html{ font:normal 62.5%/2.3em Arial,Microsoft YaHei,"宋体";}
+*{margin:0px; padding:0px;  font-size:1.2em; }
+body{  min-width:1200px; zoom:1;}
+ul,li,form, dl,dt,dd, div{ padding: 0px; margin: 0px;}
+.ul,.ul li{ list-style:none;}
+.h1,.h2,.h3,.h4,.h5,.h6,.p{ padding:0px; margin:0px;}
+select,input,textarea{ border-radius:0; -webkit-border-radius:0;}
+input:focus { outline: none;}
+input,button,select,textarea{outline:none;/*-webkit-appearance:none;*//*强制去除表单自带的样式*/ }
+textarea{resize:none;/*-webkit-appearance:none;*//*强制去除textarea自带的样式*/ }
+textarea,input,select { background:none; border:none; margin:0; padding:0;}
+article,aside,footer,header,hgroup,nav,section,figure,figcaption{ display: block;} /*html5设置*/
+figure,figcaption{ margin:0px; padding:0px;}
+audio,canvas,progress,video { display: inline-block; vertical-align: baseline;}
+img{ border:none; border:0;}
+a{text-decoration: none;}
+span{
+	cursor: default;
+}
+/*a{ text-decoration:none; noline:-webkit-tap-highlight-color:rgba(0,0,0,0);}
+a:focus {outline:none; -moz-outline:none;}
+a:hover{ text-decoration:none; color:#FF0000;}*/
+.clear{ clear:both; height:0px; overflow:hidden;}
+.hide{ display:none;}
+
+
+/*首页*/
+.indexCont{ width:100%; position:relative;background-color: #000000;}
+.indexCont .HomeBox{ width:1004px; position:absolute; left:0; top:0; z-index:2; left:50%; margin-left:-512px;}
+
+/*导航*/
+.MainNav{ width:151px; position:relative;float: left; left:0; top:0;padding-bottom: 15px;background-color: rgba(70,70,70,0.5);}
+.MainNav ul.ul{ width:151px;}
+.MainNav ul.ul li.nav_li{ width: 151px; position: relative;}
+.MainNav ul.ul li.nav_li:hover dl{ display: block;}
+.MainNav ul.ul li.nav_li:hover a.aNav { background: url('../images/red_cloth.png') no-repeat center;background-size: 100% 60px;}
+.MainNav ul.ul li.nav_li dl{ display: none; width: 130px; position: absolute; left: 153px; top: 9px; background-color: rgba(70,70,70,0.5);}
+.MainNav ul.ul li.nav_li dd{ padding-left: 10px;}
+.MainNav ul.ul li.nav_li dd a{ font-size: 15px; color: #fff; line-height: 38px;}
+.MainNav ul.ul li.nav_li dd:hover{ background-color: #ff0000;}
+.MainNav .Logo{ width:100%; /*height:132px;*/ display:block;background-color: #334455;}
+.MainNav a.aNav{ width: 160px;position:relative;color:#FDFDFD; display:block; position:relative; margin: 0 auto;text-align: center;padding-top: 10px; padding-bottom: 15px;margin-left: -5px;}
+.MainNav a.aNav span{ font-size:18px; display:block; line-height:20px;font-family: 微软雅黑;padding: 5px 0;}
+.MainNav a.aNav em{ text-transform:uppercase; font-size:12px; font-style:normal; display:block; line-height:10px; margin:0; padding:0; font-family: 微软雅黑;}
+.MainNav a.nav_first_a{border-top: none;}
+.MainNav .weixinBox{ background:#000; height:70px; overflow:hidden; padding:20px 10px;}
+.MainNav .weixinBox .h1{ float:left; width:75px; height:30px; line-height:30px; background:url("../images/Home_ico_3.png") no-repeat left center; padding:20px 0 10px 30px; color:#fff; font-size:1.16em; font-weight:normal;}
+.MainNav .weixinBox img{ width:70px; height:70px; float:right;}
+.MainNav .red_line{width: 80%;display: block;border-top: solid 2px #FA091D;margin: 0 auto;}
+.MainNav .red_line:first-child{ display: none;}
+
+/*Banner*/
+.HomeBan{ min-width: 1024px;max-width: 1790px; position:relative; overflow:hidden; z-index:1;margin: 0 auto;}
+.HomeBan ul{ display:block; /*position:absolute; left:0; top:0;*/ height: 850px; z-index:10; width:100%;margin: 0 auto;}
+.HomeBan li{ height: 850px; display:inline-block; position:absolute; /*float:left;*/ overflow:hidden;}
+.HomeBan li .item{ position:relative; width:100%; height:100%; z-index:1;}
+.HomeBan li.Li0{ z-index:2; width: 100%; }
+.HomeBan .focusL { height:850px; position:absolute; z-index:1; top:0; /*left:-100%;*/ width:100%;}
+.HomeBan .focusR { height:850px; position:absolute; z-index:2; top:0; /*right:-100%;*/ width:100%;}
+
+/*首页产品*/
+.home_pro{ display: none; min-width: 1004px;margin: 0 auto; text-align: center; padding: 50px 0; overflow: hidden;}
+.home_pro .title_h2{ font-size: 30px; display: block;}
+.home_pro .title_h3{ font-size: 22px; display: block; width: 70%; margin: 0 auto; padding: 5px 0 15px; border-bottom: solid 2px #00aaff;}
+.taozi{ width: 302px; margin:30px 25px 0 25px; display: inline-block;}
+.home_pro .home_pro_div{ width: 300px; height: 300px; position: relative; overflow: hidden; border-bottom: solid 2px #00aaff;}
+.home_pro .home_pro_div .fir_img{ width: 300px; height: 300px; position: relative; float: left;}
+.home_pro .home_pro_div .home_pro_div_xia{ /*display: none;*/ width: 450px; height: 450px; top: 0; position: relative; position: absolute; margin-left: -75px; margin-top: -75px; }
+.home_pro .home_pro_div .home_pro_div_xia .sec_img{ width: 100%; height: 100%; position: relative; float: left;}
+.home_pro .home_pro_div .home_pro_div_xia .home_pro_div_content{ width: 100%; height: 100%; position: absolute; background-color: rgba(200,0,0,0.4); line-height: 300px;}
+.home_pro .home_pro_div .home_pro_div_xia .home_pro_div_content span{ font-size: 45px; color: #fff; display: block;}
+.home_pro .home_pro_name{display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 1; overflow: hidden; font-size: 20px; color: #000000; margin-top: 10px; }
+/*.small_1{-webkit-transform: scale(0); -moz-transform:scale(0); transform: scale(0);}*/
+@media only screen and (max-width: 800px) {
+	.indexCont .HomeBox{ width: 1000px; left: 50%;}
+	.HomeBan{ width: 1000px; min-width: 600px; height: 850px;}
+	.HomeBan ul{ width: 1000px; height: 850px;}
+	.HomeBan li{ height: 850px;}
+	.home_pro { display: block; min-width: 300px;}
+}
+
+/*底部*/
+.footer{ text-align: center;padding: 15px 0; background-color: #000000;}
+.footer nav.nav_footer{ display: inline-block;}
+.footer nav.nav_footer a{ display: inline-block; font-size: 15px;margin: 5px 0;padding: 0 15px;color: #fff;border-right: solid 1px #fff;}
+.footer nav.nav_footer a:last-child{border-right: none;}
+.footer span.copyright{ display: block;font-size: 15px;color: #fff;}
+.footer span.cpy_name{ display: block;font-size: 15px;color: #fff;}
+
+
+/*媒体查询*/
+@media(max-width:1380px){
+	.HomeBan ul{
+		height: 650px;
+	}
+	.HomeBan li{
+		height: 650px;
+	}
+	.HomeBan .focusL{
+		height: 650px;
+	}
+	.HomeBan .focusR{
+		height: 650px;
+	}
+	.MainNav a.aNav{
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+	.MainNav{
+		width: 125px;
+	}
+	.MainNav ul.ul{
+		width: 120px;
+	}
+	.MainNav a.aNav{
+		width: 135px;
+	}
+	.MainNav ul.ul li.nav_li dl{
+		left: 130px;
+		top: 0px;
+	}
+	.MainNav ul.ul li.nav_li dd a{
+		font-size: 13px;
+	}
+	.MainNav ul.ul li.nav_li dl{
+		width: 110px;
+	}
+	.MainNav ul.ul li.nav_li{
+		width: 115px;
+	}
+	.MainNav a.aNav span{
+		font-size: 16px;
+	}
+}

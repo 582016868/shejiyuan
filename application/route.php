@@ -16,11 +16,7 @@ Route::controller('quest','admin/Quest');       // 题库
 Route::controller('wx','admin/Wx');             // 配置参数
 Route::controller('intro','admin/Intro');    // 订单
 
-// 接口模块路由
-Route::controller('auth','index/Login');        // 小程序授权登录
-Route::controller('photo','index/Photo');       // 小程序拍照录题
-Route::controller('order','index/Order');       // 小程序下单获取参数
-Route::controller('ocr','index/Ocr');            // 百度OCR获取Access Token
-Route::controller('search','index/Search');     // 搜索获取学校
-Route::controller('pay','index/Pay');            // 支付
+// index模块路由
+Route::controller('index','index/Index');        // 小程序授权登录
+
 

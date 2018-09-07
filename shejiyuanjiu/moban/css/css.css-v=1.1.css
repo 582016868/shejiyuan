@@ -1,0 +1,57 @@
+ /*
+    公司大事记 时间轴轮播
+  */
+ h1,h2,h3,h4,h5,h6,p,em,i,b,em{font-size:100%;word-wrap:break-word;font-style:normal; margin:0; padding:0}
+.boxR{float:left;display:inline-block;margin-left:40px;width:100%; padding-right:40px; background:url("../images/bgNavInd.png") right repeat-y; overflow:hidden; min-height:600px;}
+
+.navCur{ height:90px; border-bottom:1px solid #dedede; font-size:26px; line-height:110px; overflow:hidden; position:relative}
+.btnQh{display:block; background:url("../images/icoList.png") left center no-repeat; position:absolute; right:0; top:50px; font-size:14px; line-height:20px; color:#999; padding:0 0 0 20px;}
+.btnQh:hover{background:url("../images/icoListHover.png") left center no-repeat}
+
+.navCur1{ height:80px; font-size:26px; line-height:100px; overflow:hidden; position:relative}
+
+
+.navCur2{ width:1200px; margin:10px auto 20px auto;color:#999; line-height:20px; text-indent:20px; position:relative; z-index:1}
+.navCur2 a{ color:#999}
+.navCur2 a:hover{ color:#dd1721}
+
+.navR{background:url("../images/bgNavR.png") bottom repeat-x; font-size:0;}
+.navR a{display:inline-block; font-size:18px; height:70px; line-height:70px; text-align:center;overflow:hidden}
+.navR a:hover{font-weight:bold}
+.navR .on{ border-bottom:2px solid #dd1721; color:#dd1721; font-weight:bold}
+
+.navR1{background:url("../images/bgNavR.png") bottom repeat-x; font-size:0;}
+.navR1 a{display:inline-block; font-size:18px; height:70px; line-height:70px; text-align:center; overflow:hidden}
+.navR1 a:hover{font-weight:bold; color:#dd1721}
+.navR1 .on{ border-bottom:2px solid #dd1721; color:#dd1721; font-weight:bold}
+
+.navR2{font-size:0; text-align:center; margin:30px 0 0 0}
+.navR2 a{display:inline-block; font-size:14px; height:40px; line-height:40px; text-align:center; overflow:hidden; background:#ddd; margin:0 5px; padding:0 20px; border-radius:20px}
+.navR2 a:hover{font-weight:bold;background:#e94c3d;color:#fff}
+.navR2 .on{background:#e94c3d!important;color:#fff; font-weight:bold}
+
+.rCon{ margin-top:20px;width:100%; overflow:hidden;position:relative; }
+.rCon p{line-height:30px; margin-bottom:15px; font-size:16px; }
+.btnThtz{transition:transform 1s;}
+.btnThtz:hover{
+	transform: scale(1.1);
+}
+
+.thzlTitle{ font-size:70px; line-height:80px; color:#cbd6cd; font-family:customFont; padding:20px 0 0 10px; text-align: center;}
+.thzlTitle1{font-size:30px; line-height:30px; color:#1b7434;padding:0 0 0 20px; text-align: center;}
+.thzlTitle1 span{}
+
+.thzl{ width:100%; position:relative; background:url("../images/bgThzl.jpg") top center repeat-x; margin-top:30px;}
+.thzlList{width:90%; margin:0 auto; overflow:hidden}
+ .thzlList ul {overflow: hidden;}
+.thzlList li{float:left; width:262px; padding:46px 22px 0 0; background:url("../images/icoThzl.jpg") 32px 0 no-repeat; overflow:hidden}
+.thzlList li div{ background:#87c97f; border-radius:6px; padding:15px}
+.thzlList li h1{ font-size:34px; line-height:40px; padding-bottom:10px; font-weight:normal; font-family:customFont; background:url("../images/bgThzlTitle.jpg") bottom left no-repeat}
+.thzlList li h2{ font-size:20px; font-weight:normal; margin:10px 0 0 0}
+.thzlList li p, .thzlList li span{ line-height:20px; margin:10px 0; text-align: justify;}
+.thzlList li strong{display:block}
+.goLThzl{width:25px; height:102px; display:block; background:url("../images/btnThzlL.png") no-repeat; position:absolute; left:0; top:50%; margin-top: -51px;}
+.goLThzl:hover{background:url("../images/btnThzlLHover.png") no-repeat;}
+.goRThzl{width:25px; height:102px; display:block;background:url("../images/btnThzlR.png") no-repeat; position:absolute; right:0; top:50%; margin-top: -51px;}
+.goRThzl:hover{background:url("../images/btnThzlRHover.png") no-repeat;}
+
